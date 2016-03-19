@@ -9,7 +9,13 @@ main-color = #333
     to
         right 0
         opacity 1
-        
+@keyframes enterback
+    from
+        transform scale(0.1)
+        opacity 0
+    to
+        transform scale(1)
+        opacity 1    
 @keyframes enterleft
     from
         left -200px
@@ -102,7 +108,7 @@ p.introText
     position relative
 
     &:not(.hidden)
-        animation enter 700ms ease
+        animation enterback 700ms ease
         animation-delay 200ms
         animation-fill-mode backwards
 
